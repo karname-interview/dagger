@@ -1,0 +1,17 @@
+[package]
+name = "dagger"
+version = "2.2.8"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tera = "1.15"
+structopt = "0.3"
+log = "0.4"
+env_logger= "0.9"
+sha1="0.6"
+serde_json = "1.0"
+
+[dev-dependencies]
+file_diff = "1.0"

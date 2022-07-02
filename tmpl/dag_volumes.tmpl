@@ -1,0 +1,12 @@
+
+# managed by dagger:{{dagger_version}}
+  k8s.V1Volume(
+      name='configs',
+      config_map=k8s.V1ConfigMapVolumeSource(name='bd-access', default_mode=420,
+        items=[
+        {% for config_name in volumes %}
+        {"key":"{{config_name}}","path":"{{config_name}}"},
+        {% endfor %}
+        ]
+      ),
+  ),

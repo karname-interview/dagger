@@ -1,0 +1,9 @@
+# managed by dagger:{{dagger_version}}
+{% for config_name in volumes %}
+{
+  name: "configs",
+  mountPath: "/app/config_files/{{config_name}}",
+  readOnly: true,
+  subPath: "{{config_name}}",
+},
+{% endfor %}
